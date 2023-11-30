@@ -9,7 +9,7 @@ functions:
   src/generateRandomNumber:
     handler: src/handler.generateRandomNumber
     events:
-      - https:
+      - http:
           path: lucidactTest/generateRandomNumber
           method: get
 
