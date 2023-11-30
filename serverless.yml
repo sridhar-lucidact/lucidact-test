@@ -6,7 +6,7 @@ provider:
   region: us-west-2
 
 functions:
-  src/generaterandomnumber:
+  generateRandomNumber:
     handler: src/handler.generateRandomNumber
     events:
       - http:
