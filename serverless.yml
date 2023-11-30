@@ -10,5 +10,9 @@ functions:
     handler: src/handler.generateRandomNumber
     events:
       - https:
-          path: serverlessSetup/generateRandomNumber
+          path: lucidactTest/generateRandomNumber
           method: get
+
+#Plugins
+plugins:
+  - serveless-plugin-typescript
