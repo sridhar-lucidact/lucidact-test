@@ -15,4 +15,4 @@ functions:
 
 #Plugins
 plugins:
-  - serveless-plugin-typescript
+  - serverless-plugin-typescript
