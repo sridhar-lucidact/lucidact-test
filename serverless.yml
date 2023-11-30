@@ -8,3 +8,7 @@ provider:
 functions:
   hello:
     handler: src/handler.generateRandomNumber
+    events:
+      - https:
+          path: serverlessSetup/generateRandomNumber
+          method: get
