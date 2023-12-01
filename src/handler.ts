@@ -3,10 +3,9 @@ import {APIGatewayProxyHandler, APIGatewayProxyEvent, APIGatewayProxyResult} fro
 export const generateRandomNumber: APIGatewayProxyHandler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
   const randomNumber = Math.random()*100;
   console.log('randomNumber',randomNumber);  
+  const body = JSON.stringify({randomNumber});
   return {
     statusCode: 200,
-    body: {
-      randomNumber
-    }
+    body
   };
 };
