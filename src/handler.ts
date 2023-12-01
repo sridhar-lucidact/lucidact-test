@@ -4,7 +4,7 @@ export const generateRandomNumber: APIGatewayProxyHandler = async (event: APIGat
   const randomNumber = Math.random()*100;
   console.log('randomNumber',randomNumber);  
   return {
-    status: 200,
+    statusCode: 200,
     body: {
       randomNumber
     }
