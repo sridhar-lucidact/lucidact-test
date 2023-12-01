@@ -4,6 +4,14 @@ provider:
   runtime: nodejs18.x
   stage: dev
   region: us-west-2
+  stackName: lucidact-test
+  
+custom:
+  documentation:
+    version: '1'
+    title: 'My API'
+    description: 'This is my API'
+    models: {}
 
 functions:
   generateRandomNumber:
@@ -16,3 +24,4 @@ functions:
 #Plugins
 plugins:
   - serverless-plugin-typescript
+  - serverless-openapi-documentation

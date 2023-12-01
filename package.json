@@ -15,7 +15,7 @@
   "keywords": [
     "lucidact-test"
   ],
-  "author": "sridhar",
+  "author": "Sridhar Gudimela",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sridhar-lucidact/lucidact-test/issues"
@@ -23,10 +23,13 @@
   "homepage": "https://github.com/sridhar-lucidact/lucidact-test#readme",
   "dependencies": {
     "aws-lambda": "^1.0.7",
-    "axios": "^1.6.2"
+    "axios": "^1.6.2",
+    "lucid": "^2.21.0",
+    "mongodb": "^6.3.0"
   },
   "devDependencies": {
     "@types/node": "^20.10.1",
+    "serverless-openapi-documentation": "^0.4.0",
     "serverless-plugin-typescript": "^2.1.5",
     "typescript": "5.3.2"
   }

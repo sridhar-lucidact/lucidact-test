@@ -1,0 +1,92 @@
+import { Response } from "node-fetch"
+import { identity } from "rxjs"
+
+POST        /api/patient - create - 201
+                //create
+                [{
+                    body: {}
+                }]
+
+GET         /api/patient/{patientId} 
+GET        /api/patient/_search
+            {
+                size,
+                from,
+                sort: [
+                    {field: orderType}
+                ],   
+                  //project: 'default/_all',     
+                project: [
+                    {field, format, exclude: true}
+                ],     
+                aggregate: {//project speicifc is required, default/_all doesnt work
+                    group: [''],    
+                    field: [],//these should not be in group but in project??
+                    method: 'count/sum/avg/min/max/first/last'
+                },
+              
+                query: [{
+                    match_all:[{
+                        field: '',//exactString,
+                        field: {type: 'like/eq/not/gt/gte/lt/lte/in/nin/any', ignoreCase: false, values: ''}
+                    }],
+                    match_any:[{
+                        field: '',//exactString,
+                        field: {type: 'like/eq/not/gt/gte/lt/lte/in/nin/any', ignoreCase: false, values: ''}
+                    }],
+                    match_not:[{
+                        field: '',//exactString,
+                        field: {type: 'like/eq/not/gt/gte/lt/lte/in/nin/any', ignoreCase: false, values: ''}
+                    }]
+                }]                
+            }
+
+PATCH       /api/patient/{id}, /api/patient/{id}/healthinsurance/{id }
+            {//204
+                body: {
+                    ...fields
+                }
+            }
+PUT         /api/patient/{id}/healthinsurance/
+            [//only to add full sub reocrd - 201
+                body: {
+                    
+                }
+            ]
+DELETE      /api/patient/{id}/healthinsruance/{healthinsuranceid} //delete entire record 204
+
+
+//Success Response
+201 - Response
+//Header - Loction
+{
+    id
+
+}
+204 - Accepted
+200 - OK //for all get requests
+
+//Failure Respone
+    //client
+    400 - Bad Reqeuest
+    401 - UnAuthorized
+    402 - Payment Required *
+    403 - Forbidden
+    404 - Not found
+    405 - Method Not Allowed
+    408 - Request Timeout
+    413 - Payload Too large
+    415 - UnSupported Media Type
+    416 - Range Not Satisfiable
+    423 - Locked
+    424 - Failed Dependency
+    429 - Too Many Requests
+
+    500 - Internal Server Error
+    501 - Not Implemented
+    502 - Bad Gateway
+    503 - Service not available
+    504 - Gateway Timeout
+
+
+
