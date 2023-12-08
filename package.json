@@ -24,7 +24,7 @@
   "dependencies": {
     "aws-lambda": "^1.0.7",
     "axios": "^1.6.2",
-    "lucid": "^2.21.0",
+    "lucid-health": "^1.0.1",
     "mongodb": "^6.3.0"
   },
   "devDependencies": {
