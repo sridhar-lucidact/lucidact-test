@@ -16,6 +16,8 @@ custom:
 functions:
   generateRandomNumber:
     handler: src/handler.generateRandomNumber
+    layers:
+      path: node_modules/lucid-health
     events:
       - http:
           path: lucidactTest/generateRandomNumber

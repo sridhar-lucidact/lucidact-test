@@ -1,6 +1,6 @@
 import { Gender, Program } from '../../helpers/Enum.js'
 import { Contact } from '../../models/Contact.js';
-import { Person } from '../../models/Person.js';
+/*import { Person } from '../../models/Person.js';*/
 import { Util } from '../../helpers/Util.js';
 import { PatientStatus } from './patent.enum.js';
 import { IPatient, PatientState, PatientDevice, Demographics, HealthInsurance, CareTeamMember, Family, EmergencyContact } from './patient.interface.js';
