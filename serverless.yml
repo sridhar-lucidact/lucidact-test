@@ -13,11 +13,15 @@ custom:
     description: 'This is my API'
     models: {}
 
+layers:
+  CommonUtils:
+    path: node_modules/lucid-health
+
 functions:
   generateRandomNumber:
     handler: src/handler.generateRandomNumber
     layers:
-      path: node_modules/lucid-health
+      - {Ref: CommonUtilsLambdaLayer}
     events:
       - http:
           path: lucidactTest/generateRandomNumber
