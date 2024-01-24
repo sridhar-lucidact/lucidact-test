@@ -5,6 +5,8 @@ provider:
   stage: dev
   region: us-west-2
   stackName: lucidact-test
+  environment:
+    NODE_PATH: "./:/opt/node_modules"
   
 custom:
   documentation:
