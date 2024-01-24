@@ -23,7 +23,7 @@ functions:
   generateRandomNumber:
     handler: src/handler.generateRandomNumber
     layers:
-      - {Ref: CommonUtilsLambdaLayer}
+      - arn:aws:lambda:us-west-2:861028604347:layer:CommonUtils:1
     events:
       - http:
           path: lucidactTest/generateRandomNumber
