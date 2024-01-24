@@ -1,5 +1,5 @@
 'use strict';
-import * as lucid from 'lucid-health';
+import * as lucid from '/opt/lucid-health';
 const { ping } = lucid;
 export const generateRandomNumber = async (event) => {
     const randomNumber = Math.random() * 100;
