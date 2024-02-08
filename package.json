@@ -25,7 +25,8 @@
     "aws-lambda": "^1.0.7",
     "axios": "^1.6.2",
     "lucid-health": "^1.0.1",
-    "mongodb": "^6.3.0"
+    "mongodb": "^6.3.0",
+    "serverless-offline": "^13.3.3"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.130",

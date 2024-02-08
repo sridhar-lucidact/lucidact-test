@@ -15,15 +15,15 @@ custom:
     description: 'This is my API'
     models: {}
 
-#layers:
-#  CommonUtils:
-#    path: node_modules/lucid-health
+layers:
+  CommonUtils:
+    path: opt/node_modules/lucid-health
 
 functions:
   generateRandomNumber:
     handler: src/handler.generateRandomNumber
-#    layers:
-#      - arn:aws:lambda:us-west-2:861028604347:layer:CommonUtils:1
+    layers:
+      - arn:aws:lambda:us-west-2:861028604347:layer:CommonUtils:1
     events:
       - http:
           path: lucidactTest/generateRandomNumber
@@ -31,5 +31,6 @@ functions:
 
 #Plugins
 plugins:
+  - serverless-offline
   - serverless-plugin-typescript
   - serverless-openapi-documentation
